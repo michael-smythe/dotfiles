@@ -1,0 +1,23 @@
+#
+# ~/.bashrc
+#
+set -o vi
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='exa -l'
+alias ll='exa -l'
+alias la='exa -la'
+alias cat='bat'
+alias monfix="xrandr --output DP-4 --auto; xrandr --output DP-2 --auto; xrandr --output DP-0 --auto --primary --panning 2560x1440+2560+0 --output DP-4 --panning 2560x1440+0+0 --output DP-2 --panning 2560x1440+5120+0"
+alias upgrade="sudo pacman -Sy archlinux-keyring && sudo pacman -Syyu"
+alias vmfix="sudo CPATH=/usr/src/linux-zen/include/linux vmware-modconfig --console --install-all"
+alias pt='spt playback -t'
+alias skip='spt playback -n'
+alias prev='spt playback -p'
+alias nv='nvim'
+alias vim='nvim'
+PS1='[\u@\h \W]\$ '
+. "$HOME/.cargo/env"
+eval "$(starship init bash)"
