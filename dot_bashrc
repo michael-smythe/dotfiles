@@ -10,7 +10,7 @@ alias ls='exa -l'
 alias ll='exa -l'
 alias la='exa -la'
 alias cat='bat'
-alias monfix="xrandr --output DP-4 --auto; xrandr --output DP-2 --auto; xrandr --output DP-0 --auto --primary --panning 2560x1440+2560+0 --output DP-4 --panning 2560x1440+0+0 --output DP-2 --panning 2560x1440+5120+0"
+alias monfix="xrandr --output DP-4 --auto; xrandr --output DP-2 --auto; xrandr --output DP-0 --auto --primary --panning 2560x1440+2560+0 --output DP-4 --panning 2560x1440+0+0 --output DP-2 --panning 2560x1440+5120+0; i3-msg '[workspace=\"2\"]' move workspace to output DP-2; i3-msg '[workspace=\"3\"]' move workspace to output DP-4; i3-msg \"focus output DP-4, workspace 3;\"; i3-msg \"focus output DP-2, workspace 2;\"; i3-msg \"focus output DP-0;\""
 alias upgrade="sudo pacman -Sy archlinux-keyring && sudo pacman -Syyu"
 alias vmfix="sudo CPATH=/usr/src/linux-zen/include/linux vmware-modconfig --console --install-all"
 alias pt='spt playback -t'
