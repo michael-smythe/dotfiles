@@ -1,0 +1,8 @@
+[user]
+	email = michael.smythe@outlook.com
+	name = Michael Smythe
+[safe]
+	directory = /opt/flutter/
+	directory = *
+[init]
+	defaultbranch = main

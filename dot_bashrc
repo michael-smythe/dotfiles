@@ -18,6 +18,10 @@ alias skip='spt playback -n'
 alias prev='spt playback -p'
 alias nv='nvim'
 alias vim='nvim'
+
+export EDITOR=nvim
+export VISUAL=nvim
+
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 eval "$(starship init bash)"
