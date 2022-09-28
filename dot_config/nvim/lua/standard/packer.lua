@@ -49,6 +49,19 @@ return require("packer").startup(function()
 
     -- Rust tools
     use 'simrat39/rust-tools.nvim'
+    use {
+        'saecki/crates.nvim',
+        tag = "v0.3.0",
+        event = { "BufRead Cargo.toml" },
+        requires = { 'vim-lua/plenary.nvim' },
+        config = function() require('crates').setup() end,
+    }
+
+    -- Git 
+    use { 'tpope/vim-fugitive' }
+    use { 'rhysd/git-messenger.vim' }
+    use { 'rhysd/committia.vim' }
+    use { 'mhinz/vim-signify' }
 
     -- Treesitter
     use("nvim-treesitter/playground")
