@@ -18,6 +18,7 @@ alias skip='spt playback -n'
 alias prev='spt playback -p'
 alias nv='nvim'
 alias vim='nvim'
+alias fastkeys='xset r rate 300 70'
 
 export EDITOR=nvim
 export VISUAL=nvim
